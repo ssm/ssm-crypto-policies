@@ -1,0 +1,4 @@
+---
+crypto_policies:
+  active: true
+  current_policy: "DEFAULT"

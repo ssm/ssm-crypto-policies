@@ -1,6 +1,6 @@
 {
   "name": "ssm-crypto_policies",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "ssm",
   "summary": "Manage system-wide crypto policies on the Red Hat OS family",
   "license": "Apache-2.0",

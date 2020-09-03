@@ -5,8 +5,13 @@
 # cryptographic algorithms to use in various parts of the operating
 # system. See man:crypto-policies(7) for more information.
 #
-# @example
+# @example default
 #   include crypto_policies
+#
+# @example with a policy module
+#    class { 'crypto_policies':
+#      policy => 'DEFAULT:NO-SHA1',
+#    }
 class crypto_policies(
   Crypto_policies::Policy $policy = 'DEFAULT',
 ) {

@@ -1,7 +1,7 @@
 {
   "name": "ssm-crypto_policies",
   "version": "0.1.0",
-  "author": "Stig Sandbeck Mathisen",
+  "author": "ssm",
   "summary": "Manage system-wide crypto policies",
   "license": "Apache-2.0",
   "source": "https://github.com/ssm/ssm-crypto-policies.git",

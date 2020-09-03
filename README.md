@@ -13,15 +13,20 @@
 
 ## Description
 
-This module sets the system-wide crypto policy.
+This module sets the system-wide crypto policy on the Red Hat OS
+family.
 
-It provides a fact showing the current crypto policy and if the
-crypto-policies software is available and installed.
+The module also provides a fact showing the current crypto policy and
+if the crypto-policies software is available and installed on the OS.
+
+This affects the security level of BIND, GnuTLS, Kerberos, NSS,
+OpenJDK, OpenSSH, OpenSSL and more.
 
 The `crypto-policies` software available on the RedHat os family from
 version 8 and on configures the policy for which cryptographic
 algorithms are to be available and used across various applications
-and libraries. See the [Red Hat documentation on security
+and libraries. See the crypto-policies(7) man page or the [Red Hat
+documentation on security
 hardening](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/using-the-system-wide-cryptographic-policies_security-hardening#system-wide-crypto-policies_using-the-system-wide-cryptographic-policies)
 for more information.
 

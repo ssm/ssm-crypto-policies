@@ -85,3 +85,10 @@ EOM
   end
 end
 
+Blacksmith::RakeTask.new do |t|
+  t.commit_message_pattern = "Bump version to %s"
+  t.tag_message_pattern = "Release %s"
+  t.tag_pattern = "%s"
+  t.tag_sign = true
+end
+

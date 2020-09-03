@@ -24,7 +24,7 @@ describe 'crypto_policies' do
           { policy: 'INVALID: syntax' }
         end
 
-        it { is_expected.to compile.and_raise_error(/Crypto_policies::Policy/) }
+        it { is_expected.to compile.and_raise_error(%r{Crypto_policies::Policy}) }
       end
     end
   end

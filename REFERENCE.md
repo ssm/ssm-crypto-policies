@@ -14,7 +14,7 @@
 
 ## Classes
 
-### `crypto_policies`
+### <a name="crypto_policies"></a>`crypto_policies`
 
 This class manages the system-wide crypto policies on the Red Hat
 operating system family. This will configure policies for which
@@ -39,9 +39,11 @@ class { 'crypto_policies':
 
 #### Parameters
 
-The following parameters are available in the `crypto_policies` class.
+The following parameters are available in the `crypto_policies` class:
 
-##### `policy`
+* [`policy`](#policy)
+
+##### <a name="policy"></a>`policy`
 
 Data type: `Crypto_policies::Policy`
 
@@ -51,14 +53,18 @@ Default value: `'DEFAULT'`
 
 ## Data types
 
-### `Crypto_policies::Policy`
+### <a name="crypto_policiespolicy"></a>`Crypto_policies::Policy`
 
 The Crypto_policies::Policy data type.
 
-Alias of `Pattern[/(?x:
+Alias of
+
+```puppet
+Pattern[/(?x:
   \A
   [A-Z0-9_-]+     # Policy name
   (:[A-Z0-9_-]+)* # Zero or more policy modules, colon separated
   \z
-  )/]`
+  )/]
+```
 

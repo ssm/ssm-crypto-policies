@@ -21,4 +21,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [0.2.0]: https://github.com/ssm/ssm-crypto-policies/compare/0.1.1...0.2.0
 [0.1.1]: https://github.com/ssm/ssm-crypto-policies/compare/0.1.0...0.1.1
-[0.1.0]: https://github.com/ssm/ssm-crypto-policies/compare/tag/0.1.0
+[0.1.0]: https://github.com/ssm/ssm-crypto-policies/releases/tag/0.1.0

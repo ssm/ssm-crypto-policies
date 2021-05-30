@@ -25,6 +25,14 @@
       "operatingsystemrelease": [
         "8"
       ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "20.04",
+        "20.10",
+        "21.04"
+      ]
     }
   ],
   "requirements": [

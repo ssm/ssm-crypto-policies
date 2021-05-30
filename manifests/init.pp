@@ -14,14 +14,17 @@
 #    }
 class crypto_policies(
   Crypto_policies::Policy $policy = 'DEFAULT',
+  Stdlib::Absolutepath $config_file = '/etc/crypto-policies/config',
+  Array[String] $packages = ['crypto-policies'],
 ) {
 
-  if $facts['crypto_policies']['available'] {
-    if $facts['crypto_policies']['current_policy'] != $policy {
-      exec {"update-crypto-policies --set ${policy}":
-        user => 'root',
-        path => ['/usr/bin'],
-      }
-    }
+  class { 'crypto_policies::install':
+    packages => $packages,
+    notify   => Class['crypto_policies::config'],
+  }
+
+  class { 'crypto_policies::config':
+    config_file => $config_file,
+    policy      => $policy,
   }
 }

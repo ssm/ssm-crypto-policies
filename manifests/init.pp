@@ -5,6 +5,15 @@
 # cryptographic algorithms to use in various parts of the operating
 # system. See man:crypto-policies(7) for more information.
 #
+# @param policy
+#   Which system crypto policy to use
+#
+# @param config_file
+#   Which configuration file to manage
+#
+# @param packages
+#   Packages required for crypto-policies
+#
 # @example default
 #   include crypto_policies
 #

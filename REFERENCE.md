@@ -6,7 +6,14 @@
 
 ### Classes
 
+#### Public Classes
+
 * [`crypto_policies`](#crypto_policies): Manage system-wide crypto policies
+* [`crypto_policies::config`](#crypto_policiesconfig): Manage the crypto-policies configuration
+
+#### Private Classes
+
+* `crypto_policies::install`: Manage crypto-policies installation
 
 ### Data types
 
@@ -42,6 +49,59 @@ class { 'crypto_policies':
 The following parameters are available in the `crypto_policies` class:
 
 * [`policy`](#policy)
+* [`config_file`](#config_file)
+* [`packages`](#packages)
+
+##### <a name="policy"></a>`policy`
+
+Data type: `Crypto_policies::Policy`
+
+Which system crypto policy to use
+
+Default value: `'DEFAULT'`
+
+##### <a name="config_file"></a>`config_file`
+
+Data type: `Stdlib::Absolutepath`
+
+Which configuration file to manage
+
+Default value: `'/etc/crypto-policies/config'`
+
+##### <a name="packages"></a>`packages`
+
+Data type: `Array[String]`
+
+Packages required for crypto-policies
+
+Default value: `['crypto-policies']`
+
+### <a name="crypto_policiesconfig"></a>`crypto_policies::config`
+
+Manage /etc/crypto-policies/config, and run update-crypto-policies if it changes
+
+#### Examples
+
+##### 
+
+```puppet
+include crypto_policies::config
+```
+
+#### Parameters
+
+The following parameters are available in the `crypto_policies::config` class:
+
+* [`config_file`](#config_file)
+* [`policy`](#policy)
+
+##### <a name="config_file"></a>`config_file`
+
+Data type: `Stdlib::Absolutepath`
+
+
+
+Default value: `'/etc/crypto-policies/config'`
 
 ##### <a name="policy"></a>`policy`
 

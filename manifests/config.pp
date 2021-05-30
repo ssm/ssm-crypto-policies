@@ -1,6 +1,6 @@
-# @summary A short summary of the purpose of this class
+# @summary Manage the crypto-policies configuration
 #
-# A description of what this class does
+# Manage /etc/crypto-policies/config, and run update-crypto-policies if it changes
 #
 # @example
 #   include crypto_policies::config

@@ -1,9 +1,8 @@
-# @summary A short summary of the purpose of this class
+# @summary Manage crypto-policies installation
 #
-# A description of what this class does
+# Ensure the required packages for crypto policies are installed
 #
-# @example
-#   include crypto_policies::install
+# @api private
 class crypto_policies::install (
   Array[String] $packages = ['crypto-policies'],
 ){

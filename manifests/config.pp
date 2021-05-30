@@ -10,7 +10,7 @@ class crypto_policies::config (
 ) {
 
   file { $config_file:
-    content => $policy,
+    content => "# This file is managed by puppet\n${policy}\n",
     owner   => 'root',
     group   => 'root',
     mode    => '0644',

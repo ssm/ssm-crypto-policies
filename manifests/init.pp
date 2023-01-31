@@ -21,12 +21,11 @@
 #    class { 'crypto_policies':
 #      policy => 'DEFAULT:NO-SHA1',
 #    }
-class crypto_policies(
+class crypto_policies (
   Crypto_policies::Policy $policy = 'DEFAULT',
   Stdlib::Absolutepath $config_file = '/etc/crypto-policies/config',
   Array[String] $packages = ['crypto-policies'],
 ) {
-
   class { 'crypto_policies::install':
     packages => $packages,
     notify   => Class['crypto_policies::config'],

@@ -5,6 +5,6 @@
 # @api private
 class crypto_policies::install (
   Array[String] $packages = ['crypto-policies'],
-){
+) {
   ensure_packages($packages)
 }

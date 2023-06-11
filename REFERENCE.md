@@ -9,7 +9,7 @@
 #### Public Classes
 
 * [`crypto_policies`](#crypto_policies): Manage system-wide crypto policies
-* [`crypto_policies::config`](#crypto_policiesconfig): Manage the crypto-policies configuration
+* [`crypto_policies::config`](#crypto_policies--config): Manage the crypto-policies configuration
 
 #### Private Classes
 
@@ -17,7 +17,7 @@
 
 ### Data types
 
-* [`Crypto_policies::Policy`](#crypto_policiespolicy)
+* [`Crypto_policies::Policy`](#Crypto_policies--Policy)
 
 ## Classes
 
@@ -48,11 +48,11 @@ class { 'crypto_policies':
 
 The following parameters are available in the `crypto_policies` class:
 
-* [`policy`](#policy)
-* [`config_file`](#config_file)
-* [`packages`](#packages)
+* [`policy`](#-crypto_policies--policy)
+* [`config_file`](#-crypto_policies--config_file)
+* [`packages`](#-crypto_policies--packages)
 
-##### <a name="policy"></a>`policy`
+##### <a name="-crypto_policies--policy"></a>`policy`
 
 Data type: `Crypto_policies::Policy`
 
@@ -60,7 +60,7 @@ Which system crypto policy to use
 
 Default value: `'DEFAULT'`
 
-##### <a name="config_file"></a>`config_file`
+##### <a name="-crypto_policies--config_file"></a>`config_file`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -68,7 +68,7 @@ Which configuration file to manage
 
 Default value: `'/etc/crypto-policies/config'`
 
-##### <a name="packages"></a>`packages`
+##### <a name="-crypto_policies--packages"></a>`packages`
 
 Data type: `Array[String]`
 
@@ -76,7 +76,7 @@ Packages required for crypto-policies
 
 Default value: `['crypto-policies']`
 
-### <a name="crypto_policiesconfig"></a>`crypto_policies::config`
+### <a name="crypto_policies--config"></a>`crypto_policies::config`
 
 Manage /etc/crypto-policies/config, and run update-crypto-policies if it changes
 
@@ -92,10 +92,10 @@ include crypto_policies::config
 
 The following parameters are available in the `crypto_policies::config` class:
 
-* [`config_file`](#config_file)
-* [`policy`](#policy)
+* [`config_file`](#-crypto_policies--config--config_file)
+* [`policy`](#-crypto_policies--config--policy)
 
-##### <a name="config_file"></a>`config_file`
+##### <a name="-crypto_policies--config--config_file"></a>`config_file`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -103,7 +103,7 @@ Data type: `Stdlib::Absolutepath`
 
 Default value: `'/etc/crypto-policies/config'`
 
-##### <a name="policy"></a>`policy`
+##### <a name="-crypto_policies--config--policy"></a>`policy`
 
 Data type: `Crypto_policies::Policy`
 
@@ -113,7 +113,7 @@ Default value: `'DEFAULT'`
 
 ## Data types
 
-### <a name="crypto_policiespolicy"></a>`Crypto_policies::Policy`
+### <a name="Crypto_policies--Policy"></a>`Crypto_policies::Policy`
 
 The Crypto_policies::Policy data type.
 

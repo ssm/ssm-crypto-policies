@@ -26,13 +26,11 @@ class crypto_policies (
   Stdlib::Absolutepath $config_file = '/etc/crypto-policies/config',
   Array[String] $packages = ['crypto-policies'],
 ) {
-  class { 'crypto_policies::install':
-    packages => $packages,
-    notify   => Class['crypto_policies::config'],
-  }
 
-  class { 'crypto_policies::config':
-    config_file => $config_file,
-    policy      => $policy,
-  }
+  contain crypto_policies::install
+  contain crypto_policies::config
+
+  Class['crypto_policies::install']
+  ~> Class['crypto_policies::config']
+
 }

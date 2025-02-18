@@ -2,14 +2,11 @@
 #
 # Manage /etc/crypto-policies/config, and run update-crypto-policies if it changes
 #
-# @example
-#   include crypto_policies::config
-class crypto_policies::config (
-  Stdlib::Absolutepath $config_file = '/etc/crypto-policies/config',
-  Crypto_policies::Policy $policy = 'DEFAULT',
-) {
-  file { $config_file:
-    content => "# This file is managed by puppet\n${policy}\n",
+# @api private
+class crypto_policies::config {
+
+  file { $crypto_policies::config_file:
+    content => "# This file is managed by puppet\n${crypto_policies::policy}\n",
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
@@ -19,6 +16,6 @@ class crypto_policies::config (
     user        => 'root',
     path        => ['/usr/bin'],
     refreshonly => true,
-    subscribe   => File[$config_file],
+    subscribe   => File[$crypto_policies::config_file],
   }
 }
